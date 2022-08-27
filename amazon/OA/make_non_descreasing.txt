@@ -1,0 +1,4 @@
+给一个arraylist<int> 你可以对这个array的某一个range的数加一个数值，然后使得这个array变成一个连续上升的array（也可以等于）也就是说array[i]>=array[i-1]. check 1point3acres for more.
+return 每次操作的加数的和，使得这个和最小
+比如 [3,4,1,6,2] 可以 range(2,4) 加 3 变成 [3,4,4,9,5] 然后 加4 变成 [3,4,4,9,9] 这样return 7就好，当然你也可以 在array[2] 加 3 然后array[4] 加 4 这样操作结果也是7
+eg2. [3,2,1] return 2 eg3 [3,5,2,3] return 3

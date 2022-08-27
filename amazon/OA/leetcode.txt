@@ -1,0 +1,6 @@
+pascal's triangle
+
+2214: min health
+
+2281
+

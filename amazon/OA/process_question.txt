@@ -1,0 +1,35 @@
+Amazon Web Services (AWS) has several processors for executing proces
+scheduled on its servers.
+
+There are n processes to be executed, where the jh process takes
+execution i] amount of time to execute. Two processes are cohesive if and
+only if their original execution times are equal. When a process with
+execution time erection tin exercises, sitates"heruaionasemero"SUmal.
+and simultaneously reduces the execution time of all its cohesive processe
+to ceil(executionli] / 2).
+
+Given the execution time of n processes, find the total amount of time the
+processor takes to execute all the processes if you execute the processes in
+the given order, i.e. from left to right.
+Notes
+
+The ceill() function returns the smallest integer that is bigger or equal to its
+argument. For example, ceil(1.1) = 2, ceil(2.5) = 3, ceil(5) = 5, etc.
+If the execution time of some process is reduced and becomes equal to the
+execution time of any other process ;, then the two
+processes /and jare not considered cohesive.
+
+Example
+The number of processes is n=6, and their execution times are execution =
+[5, 5, 3, 6, 5, 3].
+Their execution can be visualized as follows where each set of cohesive
+processes is marked with a different color.
+Note that in the second row, all of the execution times that were initially 5
+were reduced to ceil(5/2).= 3 because they matched the amount of time to
+execute the first process. They are cohesive. Even though their values now
+equal those at original indices 3 and 6, they did not match originally. They
+still are not cohesive. The answer is 21.
+
+for each time:
+	for time on the right:
+		if cohesive: reduce

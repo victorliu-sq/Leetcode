@@ -1,0 +1,7 @@
+给两个string找出第1个string要加多少字母才能让第2个string变成第1个的subsequence
+e.g.
+input: "armaze", "amazon"
+output: 2
+
+two pointers
+check how many chars in str1 can match str2
