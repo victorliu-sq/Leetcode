@@ -53,10 +53,10 @@ func isSolvable(words []string, result string) bool {
 	})
 
 	// fmt.Println(keys)
-	return dfs(0, keys, 0, 0, coefficient, nonzero)
+	return dfs1307(0, keys, 0, 0, coefficient, nonzero)
 }
 
-func dfs(idx int, keys []byte, bitmaskNum int, sum int, coefficient map[byte]int, nonzero map[byte]bool) bool {
+func dfs1307(idx int, keys []byte, bitmaskNum int, sum int, coefficient map[byte]int, nonzero map[byte]bool) bool {
 	// base case
 	if idx == len(keys) {
 		// fmt.Println(sum, strconv.FormatInt(int64(bitmaskNum), 2))
@@ -79,7 +79,7 @@ func dfs(idx int, keys []byte, bitmaskNum int, sum int, coefficient map[byte]int
 		newBitmaskNum := bitmaskNum | (1 << num)
 		newSum := sum + num*coefficient[key]
 
-		res = res || dfs(newIdx, keys, newBitmaskNum, newSum, coefficient, nonzero)
+		res = res || dfs1307(newIdx, keys, newBitmaskNum, newSum, coefficient, nonzero)
 		if res {
 			return res
 		}
