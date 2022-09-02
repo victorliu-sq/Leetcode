@@ -6,8 +6,8 @@ import (
 )
 
 /*
-DFS: dfs(cur) = 1 + dfs(next)
-
+DFS: 	dfs(cur) = min( 1 + dfs(next) ) , dfs return Term for base case --> wrong
+		dfs(cur) = min( dfs(next) ) dfs return 0 for base case --> correct
 */
 
 func minNumberOfSemesters(n int, relations [][]int, k int) int {
