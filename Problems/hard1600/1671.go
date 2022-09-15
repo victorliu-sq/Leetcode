@@ -63,7 +63,7 @@ func BinarySearchLastSmaller(dpLIS []int, num int, size int) int {
 }
 
 func GetDpLIS(n int) []int {
-	dpLIS := make([]int, n)
+	dpLIS := make([]int, n+1)
 	dpLIS[0] = 0
 	for i := 1; i < n; i++ {
 		dpLIS[i] = math.MaxInt32
